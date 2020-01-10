@@ -5,6 +5,10 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def new 
   end
 
@@ -13,6 +17,8 @@ class BooksController < ApplicationController
     book.save
     redirect_to books_path
   end
+
+
 
   private
 
