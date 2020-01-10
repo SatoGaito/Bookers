@@ -20,15 +20,25 @@
   <% end  %>
 </table>
 <h1>New Book</h1>
+
 <%= form_for(@book) do |f| %>
 
-  <p>Title</p>
-  <%= f.text_field :title %>
+  <%= render 'layouts/error_messages', model: f.object %>
+  
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
 
-  <p>Body</p>
-  <%= f.text_area :body %>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
 
-  <%= f.submit "Create Book" %>
+  <div>
+    <%= f.submit "Create Book" %>
+  </div>
+  
 
 <% end %>
 
