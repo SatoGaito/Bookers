@@ -25,17 +25,17 @@
 
   <%= render 'layouts/error_messages', model: f.object %>
   
-  <div>
+  <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div>
+  <div class="field">
     <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
 
-  <div>
+  <div class="actions">
     <%= f.submit "Create Book" %>
   </div>
   
